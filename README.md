@@ -1,5 +1,4 @@
 
-```markdown
 # 🎵 Music_App Backend
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
@@ -23,7 +22,7 @@ This repository contains the **backend for Music_App**, responsible for user man
 
 - **API Endpoints**  
   - `/users` → Create, update, delete users  
-  - `/login` → Authenticate users  
+  - `/signin` → Authenticate users  
   - `/songs` → Get, save, and update songs  
   - `/favorites` → Add or remove favorite songs  
   - `/comments` → Add or retrieve comments  
@@ -44,7 +43,7 @@ Music\_App\_Backend/
 ├─ models/           # Database models (User, Song, Comment)
 ├─ routes/           # API route definitions
 ├─ config/           # Database & environment setup
-├─ server.js            # Main server file
+├─ server.js         # Main server file
 └─ package.json
 
 ````
@@ -53,7 +52,8 @@ Music\_App\_Backend/
 
 ## ⚡ Installation
 
-1. Clone the repository:  
+1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/Music_App_Backend.git
 ````
@@ -69,34 +69,35 @@ cd Music_App_Backend
 ```bash
 npm install
 ```
-4. Edit the server link as you need :
 
+4. Configure the server:
 
-For real device
-```bash
+**For real device:**
+
+```js
 const PORT = 3000;
-const server = app.listen(PORT,"0.0.0.0", () => console.log(`Server running at http://192.168.x.x:${PORT}`));
-
-```
-for emulator
-```bash
-const PORT = 3000;
-const server = app.listen(PORT () => console.log(`Server running at http://localhost:${PORT}`));
-
+const server = app.listen(PORT, "0.0.0.0", () => console.log(`Server running at http://192.168.x.x:${PORT}`));
 ```
 
+**For emulator:**
+
+```js
+const PORT = 3000;
+const server = app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+```
 
 5. Start the server:
 
 ```bash
-npm run dev  // It is a script predifined in package.json
+npm run dev  # Uses the script defined in package.json
 ```
 
-6. The backend server will run at:
+6. Access the server:
 
-```
-http://localhost:3000 or http://192.168.x.x:3000
-```
+* Emulator: `http://localhost:3000`
+* Real device: `http://192.168.x.x:3000`
+
+---
 
 ## 🔗 API Endpoints
 
@@ -205,4 +206,9 @@ POST /comments
 
 
 
+It’s now **GitHub-ready** and professional.  
 
+If you want, I can also **make a matching README for your frontend Music_App** that references this backend cleanly.  
+
+Do you want me to do that?
+```
